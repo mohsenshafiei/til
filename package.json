@@ -6,6 +6,7 @@
   "scripts": {
     "create": "node index.js --create",
     "clean": "node index.js --clean",
+    "mkdir": "node index.js --mkdir",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mohsenshafiei",

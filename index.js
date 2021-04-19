@@ -5,6 +5,7 @@ const fs = require("fs");
 const minimist = require("minimist");
 const { spawn } = require("child_process");
 
+const createDir = (name) => spawn("mkdir", [`./${name}`]);
 const createFile = (dir, file) => spawn("touch", [`${dir}/${file}`]);
 const removeFile = (dir, file) => spawn("rm", ["-rf", `${dir}/${file}`]);
 const returnToRoot = () => spawn("cd", [".."]);
@@ -16,6 +17,11 @@ const createReadme = () => {
   });
 };
 
+const createFolderAndAddReadmeMe = async (name) => {
+  const res = await createDir(name);
+  createFile(name, "README.md");
+};
+
 const removeReadme = () => {
   fs.readdirSync(testFolder).forEach((dir) => {
     removeFile(dir, "README.md");
@@ -25,7 +31,8 @@ const removeReadme = () => {
 
 const main = () => {
   const args = minimist(process.argv.slice(2));
-  const { clean, create } = args;
+  console.log(args);
+  const { clean, create, mkdir, name } = args;
   if (create) {
     createReadme();
     return;
@@ -33,6 +40,10 @@ const main = () => {
   if (clean) {
     removeReadme();
     return;
+  }
+  if (mkdir) {
+    if (name) createFolderAndAddReadmeMe(name);
+    else console.log("Package name is empty. (npm run mkdir --name=<directory_name>)");
   }
 };
 
