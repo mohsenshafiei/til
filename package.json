@@ -1,0 +1,16 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "node index.js --create",
+    "clean": "node index.js --clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohsenshafiei",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}
