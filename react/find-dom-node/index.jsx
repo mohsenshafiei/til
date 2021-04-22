@@ -33,3 +33,5 @@ export default MyComponent;
 // findDOMNode returns null. When a component renders
 // to a string, findDOMNode returns a text DOM node
 // containing that value.
+
+// In most cases, you can attach a ref to the DOM node and avoid using findDOMNode at all.
