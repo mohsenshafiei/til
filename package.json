@@ -12,6 +12,10 @@
   "author": "mohsenshafiei",
   "license": "MIT",
   "dependencies": {
+    "elm": "file:elm",
     "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
