@@ -19,7 +19,7 @@ const Mouse = (props) => {
     setY(event.clientY);
   };
   return (
-    <div style={{ height: "100vh" }} onMouseMove={this.handleMouseMove}>
+    <div style={{ height: "100vh" }} onMouseMove={handleMouseMove}>
       {props.render({ x, y })}
     </div>
   );
