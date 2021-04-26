@@ -1,0 +1,44 @@
+{
+  "name": "learning-redis",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Mohsen Shafiei <mohsen.shafieitafreshi@shopee.com>",
+  "homepage": "https://github.com/mohsenshafiei/til#readme",
+  "license": "ISC",
+  "main": "lib/redis.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohsenshafiei/til.git"
+  },
+  "scripts": {
+    "watch": "nodemon ./node-redis/index.js --ignore public/",
+    "start": "node ./node-redis/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mohsenshafiei/til/issues"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "es6-promisify": "^6.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.1",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
