@@ -1,4 +1,3 @@
-// Require Redis Here
 const redis = require("redis");
 
 require("dotenv").config();
