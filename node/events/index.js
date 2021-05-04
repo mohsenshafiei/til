@@ -81,3 +81,6 @@ process.nextTick(() => {
 });
 
 foo().then(() => console.log('done'));
+
+
+// Once the object emits a specific event, its listener functions are called synchronously.
