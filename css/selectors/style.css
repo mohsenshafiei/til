@@ -1,0 +1,70 @@
+/* Every selectors that we have */
+.wrapper1 {
+  background-color: red;
+}
+
+.wrapper1,
+.wrapper2 {
+  background-color: blue;
+  padding: 12px;
+}
+
+.wrapper1 > div {
+  background: green;
+}
+
+.wrapper1 > div:nth-child(even) {
+  background: yellow;
+}
+
+#css {
+  font-size: 32px;
+}
+
+.wrapper2 .div3 {
+  font-size: 32px;
+  color: pink;
+}
+
+.wrapper2:hover {
+  background-color: orange;
+}
+
+.wrapper2:hover .div3 {
+  background-color: salmon;
+}
+
+.wrapper2 .paragraph::first-letter {
+  font-size: 32px;
+  color: lightblue;
+  font-weight: 800;
+}
+
+.paragraph.label {
+  color: silver;
+  font-size: 48px;
+}
+
+div + p {
+  background-color: yellow;
+}
+
+/* 
+  psuedo classes targets the selector in a specific state 
+  
+  LVHA:
+
+  a:link
+  a:visited -> 
+  a:hover -> when we are on the element but we have not clicked yet
+  a:active -> when we click on something
+
+  p:first-child
+  p:last-child
+  p:only-child
+  p:nth-child()
+  p:nth-child(odd | even)
+
+
+  .class1.class2 -> when element has both classes
+*/

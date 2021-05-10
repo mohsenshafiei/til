@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  height: 150px;
+  padding: 20px;
+  border: 5px solid orange;
+  background-color: orange;
+}
+
+.wrapper > div {
+  flex: 0 0 100px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px;
+  flex-direction: row;
+  padding: 25px;
+  color: white;
+  border: 2px solid white;
+  background-color: purple;
+  justify-content: center;
+  align-self: center;
+  height: 100px;
+}
+.end {
+  flex-grow: 3;
+}
+
+/* 
+All properties that we have in flex are:
+
+- display
+- order
+- flex-direction
+- flex-grow
+- flex-wrap
+- flex-shrink
+- flex-flow
+- justify-content
+- flex
+- align-self
+- align-items
+- align-content
+*/
+
+/* 
+
+All the properties related to Flex are :
+
+flex -> property shorthand for flex-grow, flex-shrink and flex-basis
+default value: <flex-grow: 0> <flex-shrink: 1> <flex-basis: auto>
+
+flex-basis -> basically you can define the length of the elements
+another definition is "This defines the default size of an element before the remaining space is distributed."
+
+
+flex-direction -> Set the direction of the flexible items inside the <div> element in reverse order:
+flex-direction: row | row-reverse | column | column-reverse | initial | inherit
+
+flex-flow -> is shorthand property for flex-direction and flex-wrap
+flex-flow: flex-direction flex-wrap | initial | inherit
+example => flex-flow: row wrap;
+
+
+
+
+*/

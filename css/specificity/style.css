@@ -1,0 +1,35 @@
+/* If there are two or more conflicting CSS rules  */
+/* that point to the same element, the browser follows some  */
+/* rules to determine which one is most specific and therefore wins out. */
+
+/* Specificity Hierarchy */
+
+/* 
+1- Inline styles
+2- IDs
+3- Classes, Attributes and Pseudo-Classes
+4- Elements and pseudo elements 
+*/
+
+
+/* Equal specificity: the latest rule counts  */
+
+/* 
+
+ID selectors have a higher specificity than attribute selectors 
+
+div#a {background-color: green;}
+#a {background-color: yellow;}
+div[id=a] {background-color: blue;}
+
+result is gonna be green
+*/
+
+
+
+/* 
+Contextual selectors are more specific than a single element selector -
+The embedded style sheet is closer to the element to be styled. So in the following situation 
+*/
+
+/* The universal selector and inherited values have a specificity of 0 */
