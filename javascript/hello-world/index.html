@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <header>
+  </header>
+  <style>
+    .myButton {
+      width: 200px;
+      height: 100px;
+      padding: 10px;
+      background-color: #cccccc;
+      outline: none;
+      box-shadow: none;
+      border: 2px solid black;
+      border-radius: 25px;
+      color: black;
+      font-size: 44px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+  <body>
+    <button class="myButton" onclick="handleClick()">Click Me</button>
+  </body>
+  <script>
+    function handleClick() {
+      alert("Hey you clicked!");
+    }
+  </script>
+</html>
+
+
+<!-- 
+
+  1- What are different script attributes?
+  2- What is type attribute in script tag?
+  3- What is language attribute in script tag and why we don't need it anymore?
+  4- How we can add external script?
+  5- What is the benefit of external script?
+  6- Is it possible to write something like below code?
+
+    <script src="file.js">
+      alert(1); // the content is ignored, because src is set
+    </script>
+-->
