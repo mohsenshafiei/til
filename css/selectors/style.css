@@ -1,3 +1,7 @@
+/* 
+To apply CSS to an element you need to select it
+*/
+
 /* Every selectors that we have */
 .wrapper1 {
   background-color: red;
@@ -68,3 +72,64 @@ div + p {
 
   .class1.class2 -> when element has both classes
 */
+
+
+/* one thing that you should know is that we cannot start a class with a number */
+
+
+/* 
+Why we should prefer to use class selectors instead of ID?
+
+1- Class has lower specificity it is easier to override but if we want to override id
+we need to use !important
+
+2- Classes can be reused. This means that when we attach a style to an ID, you won't
+be able to reuse it within the same webpage.
+
+3- An element can have multiple classes, but only one ID
+
+
+*/
+
+/* making our selector case-sensitive */
+[data-type='primary' s] {
+  color: red;
+}
+
+/* A href that contains “example.com” */
+[href*='example.com'] {
+  color: red;
+}
+
+/* A href that starts with https */
+[href^='https'] {
+  color: green;
+}
+
+/* A href that ends with .com */
+[href$='.com'] {
+  color: blue;
+}
+
+
+/* 
+To style each bullet point in a list
+Your list will now either have red dots, or red numbers 
+*/
+li::marker {
+  color: red;
+}
+
+/* to style the content that has been highlighted by a user. */
+::selection {
+  background: black;
+  color: white;
+}
+
+/* 
+Note that we only can cascade downwards, selecting child elements.
+
+We are not able to target upwards and select parent elements
+*/
+
+/* A combinator is what sits between two selectors */

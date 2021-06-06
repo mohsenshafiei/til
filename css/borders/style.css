@@ -1,0 +1,62 @@
+/* 
+border: 2px solid red;
+
+border-styel: dotted | dashed | solid | double | groove | ridge | inset | outset
+
+border-top-style
+border-bottom-style
+border-left-style
+border-right-style
+
+border-top-color
+border-bottom-color
+border-left-color
+border-right-color
+
+border-width: thin | medium | thick -> default value is medium
+
+border-bottom-width
+border-top-width
+border-right-width
+border-left-width
+
+border-inline-end -> we can add logical properties as well
+
+border-radius
+border-top-left-radius
+border-top-right-radius
+border-bottom-left-radius
+border-bottom-right-radius
+
+
+Cool example:
+
+border-top-left-radius: 1em 2em;
+
+Another cool example:
+
+border-radius: 95px 155px 148px 103px / 48px 95px 130px 203px;
+
+
+border-image
+
+Example
+.my-element {
+  border-image-source: url(https://assets.codepen.io/174183/border-image-frame.jpg);
+  border-image-slice: 61 58 51 48;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch;
+}
+
+border-image-slice property is a useful property that allows you to slice
+an image into 9 parts, made up of 4 split lines. 
+
+
+Note: The default border color is `currentColor` which is the current font color
+
+The default width of border is not 1px and it is medium.
+
+border-inline: 1px solid would put borders on the left and right (in Latin layouts).
+
+*/

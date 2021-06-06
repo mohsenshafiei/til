@@ -1,0 +1,33 @@
+/* 
+CSS grid layouy provides a two dimensional layout system, controlling layout
+in rows and columns.
+
+Things that we can do with grid are:
+
+1- A grid can be defined in rows and columns. You can choose how to size
+these row and column tracks or they can react to the size of content
+
+2- Direct children of the grid container will be automatically place onto
+this grid
+
+3- Or, you can place the items in the precise location that you want
+
+4- Lines and areas on the grid can be named to make placement easier
+
+5- Spare space in the grid container can be distributed between tracks
+
+6- Grid items can be aligned within their area
+
+
+
+Terminologies:
+
+Grid Lines
+Grid track
+Grid cell
+Grid area
+Grid gap
+Grid container
+Grid item
+
+*/

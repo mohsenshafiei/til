@@ -1,0 +1,85 @@
+/* 
+There are many ways to do element spacing
+
+HTML spacing:
+<br />, <hr />
+
+HTML entity:
+&nbsp -> provides inline space
+
+
+Use HTML element to add space only when the elements helps
+with the understanding of the document.
+
+Margin -> TRouBLe -> top, right, bottom, left
+
+margin: 20px -> all sides
+margin: 20px 40 px -> top, bottom 20px and left,right are 40px
+margin: 20px 40px 30px -> top : 20px, left and right: 40px and bottom: 30px
+
+If you use a percentage, the value will be calculated based on the width of your element's containing block.
+
+For block level elements with a restricted size, an auto margin will take
+up available space in the direction that it is applied to.
+
+Negative margin :
+
+Negative values can also be use for margin. Instead of adding space between
+adjacent sibling elements, it will reduce space between them. This can result in
+overlapping elements.
+
+Margin Collapse:
+
+margin collapse works by selecting the largest value of two
+adjoining elements with vertical margin set on the adjoining sides.
+
+Suppose the bottom of the h1 meets the top of the p, so the largest value of
+the h1's bottom margin and the p's top margin is selected. if the h1 were to have
+3.5rem of bottom margin, the space between them both would then be 3.5rem because
+that is larger than 3rem.
+
+Note: if anything is added to the inside of this element though, including
+padding, its margin will no longer collapse in itself and will be treated as any
+box with content.
+
+if you make an element absolutely positioned, using `position: absolute`, the margin
+will no longer collapse. The margin also won't collapse if you use the float property too.
+
+
+if you have an element with no margin between two elements with block margin, the margin
+won't collapse either, beacuse the two elements with block margin are not longer adjacent
+siblings. They are just siblings.
+*/
+
+/* 
+Positions:
+
+If you set a value for position that is anything other than static, you can space elements
+witht the top, right bottom and left properties
+
+An element with position: relative will maintain its place in the document flow, even
+when you set these values. They will be relative to your element's position too.
+
+An element with `position:absolute` will base the directional values from the relative parent's position.
+
+An element with position: fixed will base the directional values on the viewport.
+
+An element with position: sticky will only apply the directional values when it is in its docked/stuck state.
+
+
+It is a really good idea to choose a strategy and stick with it to help you create a consistent user interface
+that has good flow and rhythm. A good way to achieve this is use consistent measures for your spacing.
+
+
+*/
+
+/* 
+Summary:
+
+to increase document readability: <br /> and <hr />
+to create space inside the box: padding
+to create space outside the box: margin
+to create space between the boxes: gap
+
+
+*/

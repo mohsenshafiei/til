@@ -1,0 +1,80 @@
+/* 
+Understanding the display property
+
+The display property does two things:
+
+The first thing it does is determine if the box it is applied
+to act as inline or block.
+
+
+INLINE:
+inline elements behave like words in a sentence.
+
+They sit next to each other in the inline direction.
+
+Some elements like <span>, <strong>, <a> and etc are inline by default.
+
+You can't set an explicit width and height or inline elements. Any block level
+margin and padding will be ignored by the surrounding elements.
+
+
+BLOCK:
+block elements don't sit alongside each other. They create a new line for themselves.
+Unless changed by other CSS code, a block element will expand to the size of the inline
+dimension, therefor spanning the full width in a horizontal writing mode. The margin on all sides
+of a block element will be respected.
+
+FLEX:
+The display property also determines how an element's children should behave.
+For example setting the display property to `display: flex` makes the box a block-level
+box, and also converts its children to flex items. This enables the flex properties that
+control alignment, ordering and flow.
+
+Flexbox is a layout mechanism for one-dimensional layouts.
+
+By default, flexbox will align the element's children next to
+each other, in the inline direction, and stretch them in the block direction so they are all the same height.
+
+
+GRID:
+
+Grid is similar in a lot of ways to flexbox, but it is designed to control
+multi-axis layouys instead of single-axis layouts (vertical or horizontal space).
+
+Grid enables you to write layout rules on an element that has
+display: grid and introduces a few new primitives for layout styling, such as repeat() and minmax()
+functions.
+
+One useful grid unit is `fr` unit- which is a fraction of remaining space.
+*/
+
+.my-element {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.my-element :first-child {
+  grid-row: 1/3;
+  grid-column: 1/4;
+}
+
+/* 
+Using inline-block gives you a box that has some of the characteristics of
+a block-level element, but still flows inline with the text.
+*/
+
+/* 
+The float property instructs an element to "float" to the direction specified. The image in this
+example is instructed to float left, whcih then allows sibling elements to "wrap" around it. You can
+instruct an element to float left, right or inherit.
+
+IMPORTANT: When you use float, keep in mind that any elements following the floated element may have 
+their layout adjusted. To prevent this, you can clear the float, either by using clear: 
+both on an element that follows your floated element or with display: flow-root on the parent of your floated elements.
+
+The “clear: both” means floating the elements are not allowed to float on both sides. 
+It is used when no need of any element float on the left and right side as related to
+the specified element and wanted the next element only shown below. 
+*/
+

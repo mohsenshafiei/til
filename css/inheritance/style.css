@@ -1,0 +1,67 @@
+/* 
+Some CSS properties are inheritable
+*/
+
+/* 
+How inheritance works?
+
+Every HTML element has every CSS property defined by default
+with an initial value. An initial value is a property that is not
+inherited and shows up as a default if the cascade fails to calculate
+a value for that element.
+*/
+
+/* 
+Properties that can be inherited cascade downwards, and each elements
+will get a computed value which represents its parent's value.
+*/
+
+
+/* 
+You can make any property inherit its parent's computed value
+witht the inherit.
+*/
+
+/* 
+The initial keyword sets a property back to that initial, default value.
+*/
+
+/* 
+The `unset` property behaves differently if a property is inheritable or not.
+If a property is inheritable, the unset keyword will be the same as inherit. If
+the property is not inheritable, the unset keyword is equal to initial.
+*/
+
+/* 
+List of elements that are inheritable:
+
+azimuth
+border-collapse
+border-spacing
+caption-side
+color
+cursor
+direction
+empty-cells
+font-family
+font-size
+font-style
+font-variant
+font-weight
+font
+letter-spacing
+line-height
+list-style-image
+list-style-position
+list-style-type
+list-style
+orphans
+quotes
+text-align
+text-indent
+text-transform
+visibility
+white-space
+widows
+word-spacing
+*/

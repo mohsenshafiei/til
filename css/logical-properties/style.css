@@ -1,0 +1,79 @@
+/* 
+Logical, flow relative properties and values are linked
+to the flow of the text, rather than the physical shape
+of the screen.
+
+The physical properties of top, right, left and bottom refer
+to the physical dimensions of the viewport. You can think
+of these like a compass rose on a map.
+
+Logical properties on the other hand, refer to edges of
+the box as they relate to the flow of the content.
+
+Therefore they can change if the text direction or writing
+mode changes.
+
+This is big shift from directional styles and it gives
+us a lot more flexibility when styling our interfaces.
+
+Block Flow:
+
+Block flow is the direction in which content blocks are
+placed.
+
+Inline Flow:
+
+The inline flow is how text flows in a sentence.
+
+Flow Relative Properties:
+
+margin-block-start
+margin-block-end
+max-inline-size
+max-block-size
+text-align: start (end)
+padding-block-start: 2em;
+padding-block-end: 2em;
+margin-inline-start: 2em;
+inset-block-start: 0.2em; // The inset-block property moves it inwards from the block-start.
+
+The inset-block property isn't the only shorthand option with logical properties.
+
+inset: 0.2em 0 0 0;
+
+
+The "end-end" in border-end-end-radius is the block end and inline end.
+border-end-end-radius: 1em;
+
+
+Logical properties bring two new units: vi and vb
+
+A vi unit is 1% of the viewport size in the inline direction.
+
+The vb unit is 1% of the viewport in the block direction. The non-logical property equivalent is vh
+
+Use cases of logical properties:
+
+Logical properties and writing modes are not just for internationalization. 
+You can use them to produce a more versatile user interface.
+
+you can use logical properties for charts and 
+labeling X axis and X axis
+
+
+Good Example of Logical Properties
+
+inline icon common case to solve:
+
+p {
+  display: inline-flex;
+  align-items: center;
+}
+
+p svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-inline-end: 0.5em;
+  flex: none;
+}
+*/

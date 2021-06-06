@@ -1,0 +1,26 @@
+/* 
+Filters in CSS mean that you can apply effects you might only think possible
+in a graphic application.
+
+filter properties:
+
+blur(<how_much_blur_you_want>)
+brightness(<percentage>)
+contrast(<percentage>)
+grayscale(<percentage>)
+invert(<1 or 0 to turn off and on>)
+opacity(<percentage>)
+saturate(<percentage>)
+sepia(<percentage>)
+hue-rotate(<>)
+drop-shadow -> drop-shadow(5px 5px 10px orange);
+url -> allows you to apply an SVG filter from a linked SVG element or file
+
+The backdrop-filter property accepts all of the same filter function values
+as filter. The difference between backdrop-filter and filter is that the 
+backdrop-filter property only applies the filter to the background where the
+filter property applies it to the whole element.
+
+
+
+*/

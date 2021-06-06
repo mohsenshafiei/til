@@ -1,0 +1,68 @@
+/* 
+Sometimes you want limit the line length to improve readability.
+How would you do that?
+
+Answer: you can use `ch` unit, which is equal to the width of a "0" character in the
+rendered font at its computed size. This unit allows you to limit the width of text with
+of text with a unit that is designed to size text, which is turn, allows predictable control regardless
+of the size of that text.
+*/
+
+/* 
+It is a good idea to use a unitless value for line-height, rather than
+specifying a unit. As you learned in the inheritance module, font-size can be
+inherited. Defining a unitless line-height keeps the line-height relative to the font-size.
+This provides a better experience than, say, line-height: 15px, which will not change
+and might look strange with certain font sizes.
+*/
+
+/* 
+Absolute Lengths
+
+Unit	Name	Equivalent to
+cm	Centimeters	1cm = 96px/2.54
+mm	Millimeters	1mm = 1/10th of 1cm
+Q	Quarter-millimeters	1Q = 1/40th of 1cm
+in	Inches	1in = 2.54cm = 96px
+pc	Picas	1pc = 1/6th of 1in
+pt	Points	1pt = 1/72th of 1in
+px	Pixels	1px = 1/96th of 1in
+
+*/
+
+/* 
+Relative Lengths
+
+unit	relative to:
+em	Relative to the font size, i.e. 1.5em will be 50% larger than the base computed font size of its parent. (Historically, the height of the capital letter "M").
+ex	Heuristic to determine whether to use the x-height, a letter "x", or `.5em` in the current computed font size of the element.
+cap	Height of the capital letters in the current computed font size of the element.
+ch	Average character advance of a narrow glyph in the element's font (represented by the "0" glyph).
+ic	Average character advance of a full width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph.
+rem	Font size of the root element (default is 16px).
+lh	Line height of the element.
+rlh	Line height of the root element.
+
+*/
+
+/* 
+Viewport Relative Units
+
+unit	relative to
+vw	1% of viewport's width. People use this unit to do cool font tricks, like resizing a header font based on the width of the page so as the user resizes, the font will also resize.
+vh	1% of viewport's height. You can use this to arrange items in a UI, if you have a footer toolbar for example.
+vi	1% of viewport's size in the root element's inline axis. Axis refers to writing modes. In horizontal writing modes like English, the inline axis is horizontal. In vertical writing modes like some Japanese typefaces, the inline axis runs top to bottom.
+vb	1% of viewport's size in the root element's block axis. For the block axis, this would be the directionality of the language. LTR languages like English would have a vertical block axis, since English language readers parse the page from top to bottom. A vertical writing mode has a horizontal block axis.
+vmin	1% of the viewport's smaller dimension.
+vmax	1% of the viewport's larger dimension.
+*/
+
+/* 
+By sizing text with relative units like `em` or `rem`,
+rather than an absolute unit, like `px`, the size of your text
+can respond to user preferences, This can include the system font size
+or parent element's font size, such as the <body>. Thes base size of the
+em is the element's parent and the base size of the `rem` is the base font size
+of the document.
+*/
+

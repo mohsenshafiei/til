@@ -1,0 +1,120 @@
+/* 
+Pseudo class let you apply CSS based on state changes. This means that your design
+can react to user input such as an invalid email address.
+
+:hover
+:active -> click or before click release
+:focus
+:focus-within -> you can react if a child element of your element receives focus
+:focus-visible ->  you can present a focus when an element receives focus via the keyboard
+
+
+:target
+
+The :target pseudo-class selects an element that has an id matching a url fragment.
+
+say you have the following HTML
+
+```
+<article id="content">
+	…
+</article>
+```
+
+You can attach styles to that element when the url contains #content
+
+#content:target {
+	background: yellow;
+}
+
+This is useful for highlighting areas that might have been 
+specifically linked to, such as the main content on a website, via a skip link.
+
+
+:link -> has not been visited yet
+:visited -> has been visited
+
+if you define a :visited style, it can be overriddern by a link pseudo-class with at
+least equal specificity. Becuase of this, it is recommended taht you use the LVHA rule for 
+styling links with pseudo-classes in a particular order :link, :visited, :hover, :active.
+
+a:link {}
+a:visited {}
+a:hover {}
+a:active {}
+
+Form States
+works for example with a button
+
+:disabled
+:enabled
+
+:checked
+:indeterminate
+
+:placeholder-shown -> as soon as there is content inside the input field, whether
+it has a placeholder or not, this state will no longer apply.
+
+:valid
+:invalid
+:in-range
+:required
+:optional
+
+
+Note: it is not a good idea to rely solely on color to signify state changes
+especially red and green - because colorlind and low-vision user can struggle
+to see a state and change or even miss it completely. A good idea to use color
+to support state changes, along with text changes and icon changes to 
+visuallly signigy change.
+
+:first-child
+:last-child
+:nth-child
+:only-child
+:first-of-type
+:last-of-type
+:nth-of-type
+:nth-child(3n+3)
+:only-of-type
+:empty -> if an element has no children then this style will apply
+
+Good Example:
+
+.post :empty {
+	display: none;
+}
+
+:is -> finding all elements that we need in compact way
+
+.post :is(h2, li, img) {
+  // some style here
+}
+
+Note: The `:is()` psuedo-class is not only more compact but it is also more
+forgiving. In most cases, if there is an error or unsupported selector in
+a selector list, the entire selector list will no longer work. If there is 
+an error in the passed selector in an :is pseudo-class, it will ignore the invalid
+selector, but use those which are valid.
+
+:not()
+
+you can exclude items with the :not() pseudo-class.
+
+a:not([class]) {
+	color: blue;
+}
+
+Cool Example:
+
+A :not pseudo-class can also help you to improve accessibility.
+
+Look at below example:
+
+img:not([alt]) {
+	outline: 10px red;
+}
+
+
+
+*/

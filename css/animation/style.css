@@ -1,0 +1,75 @@
+/* 
+What is a keyframe?
+
+In animation software, CSS and most other tools that enable you to animate
+something, keyframes are the mechanism that you use to assign animation states
+to timestamps, along a timeline.
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+}
+
+Animation properties
+
+* animation-duration -> property defines how long the @keyframes timeline should be
+
+* animation-timing-function -> to help recreate natural motion in animation,
+you can use timing functions that calculate the speed of an animation at each point
+
+different animation timing functions are:
+
+linear
+ease
+ease-in
+ease-out
+ease-in-out
+cubic-bezier
+
+* animation-iteration-count
+
+* animation-direction: normal | reverse | alternate | alternate-reverse
+
+* animation-delay
+
+NOTE: unlike the animation-duration property, you can define this as a
+negative value. If you set a negative value, the timeline in your @keyframes
+will start at that point. For example, if your animation is 10 seconds
+and you set animation-delay to -5s, it will start from half-way along your
+timeline.
+
+* animation-play-state: pause | running
+
+* animation-fill-mode:
+
+The animation-fill-mode property defines which values in your
+@keyframes timeline persist before the animation start or after it ends.
+
+The default value is none which means when the animation is complete,
+the values in your timeline are discarded. Other options are:
+
+forwards: the last keyframe will persist, based on the animation direction.
+backwards:  the first keyframe will persist, based on the animation direction.
+both: follows the rules for both `forwards` and `backwards`
+
+NOTES:
+
+Users can define in their operating system that they prefer to reduce
+motion experienced when they interact with applications and websites.
+
+This preference can be detected using the prefers-reduced-motion media query.
+
+@media (prefers-reduced-motion) {
+  .my-autoplaying-animation {
+    animation-play-state: paused;
+  }
+}
+
+The `animation-timing-function` is also commonly know as Easing.
+*/

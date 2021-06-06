@@ -1,0 +1,61 @@
+/* 
+There are differnt ways for defining color in your style
+*/
+
+/* 
+Different ways of color defining are:
+
+
+1- Numerical Color:
+
+#ffffff is white
+#000000 is black
+
+2- RGB (Red, Green, Blue)
+
+rgb(0, 0, 0) is black
+rgb(255, 255, 255) is white
+rgb(255, 255, 255, 0.5) we can change opacity 
+
+3- HSL (Hue, Satuation, Lightness)
+
+imagine a circle with different color like below: 
+
+orange(0) -> 
+yellow (60) -> 
+green(120) -> 
+cyan(180) -> 
+blue(240) -> 
+purple(300) -> 
+red(330) ->
+orange
+
+Saturation is how vibrant is the color
+A full desaturated color (with a saturation of 0%) will appear grayscale.
+
+Lightness is the parameter which describes thte scale from white
+to black of added light
+
+A lightness of 100% will always give you white
+
+hsl(0, 0%, 0%)
+hsl(0deg, 0%, 0%)
+hsl(0turn, 0%, 0%)
+hsla(0, 0%, 0%, 0.5) -> this is adding alpha
+
+4- Color Keywords
+There are 148 named colors in CSS
+*/
+
+
+/* 
+Aside from standard colors, there are also special keywords available
+
+- transparent -> is default background
+
+- currentColor -> it gets color based on the font color
+
+Note: If the element that you define currentColor on does not have
+a value for color defined, currentColor will be computed by the cascade instead.
+*/
+

@@ -33,3 +33,51 @@ The embedded style sheet is closer to the element to be styled. So in the follow
 */
 
 /* The universal selector and inherited values have a specificity of 0 */
+
+
+/* 
+Each selector rule gets a scoring. You can think of specificity as a total score
+and each selector type earns points towards that score. The selector with the highest
+score wins.
+*/
+
+/* 
+With specificity in real project, the balancing act is making sure the CSS rules you
+expect tp apply, actually do apply, while generally keeping scores low to prevent
+complexity.
+*/
+
+/* 
+Scoring System
+
+1- Universal selector (*): 0
+2- Element and Pseudo-Element: 1
+3- Class, Pseduo-Class or Attribute selector get 10 points of specificity
+4- ID selector gets 100 points
+5- Inline styling gets 1000 points
+6- !important rules gets 10000 points
+*/
+
+
+/*
+To visualize specificity:
+
+#myId - .my-class - div
+        [class]   - ::selection
+        :hover
+
+1     -     3     -  0
+*/
+
+
+
+/* 0-4-1 */
+a.my-class.another-class[href]:hover {
+  color: lightgrey;
+}
+
+/* 
+If two element get the same specificity, then the newer one has a better score,
+the newer style will apply.
+*/
+

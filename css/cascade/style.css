@@ -1,0 +1,90 @@
+/* 
+The cascade is the algorithm for solving conflicts where multiple CSS rules
+apply to an HTML element.
+*/
+
+/* 
+Understanding the cascade algorithm helps you understand 
+how the browser resolves conflicts
+*/
+
+/* 
+The cascade algorithm is split into 4 distinct stages.
+
+1- Position and order of appearance: the order of which your CSS rules appear.
+2- Specificity: an algorithm which determines which selector has the strongest match
+3- Origin: the order of when CSS appears anw where it comes from, whether that is a browser
+style, CSS from a browser extension, or you authored CSS.
+4- Importance: some CSS rules are weighted more heavily than others, especially with the
+!important rule type.
+*/
+
+/* 
+Position and order of appearance:
+
+They get more specific, the further down the page they are.
+*/
+
+
+/* 
+Being able to specify two values for the same property can be a simple way to create
+fallback for browsers that do not support a particular value.
+*/
+.my-element {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, calc(1rem + 3vw), 2rem);
+}
+
+/* 
+This approach of declaring the same property twice works because browsers
+ignore values they don't understand. Unlike some other programming languages, CSS will
+not throw an error or break your program when it detects a line it cannot parse.
+*/
+
+
+/* 
+Specificity is an algorithm which determines which CSS selector is the most specific,
+using a weighting or scoring system to make those calculations. B
+*/
+
+/* 
+Specificity is cumulative
+
+Each type of selector is awarded points which indicate how specific it is, the 
+points for all of the selectors you have used to target an element are added
+together.
+*/
+
+
+/* 
+Origin in Cascading
+
+The CSS that you write is not the only CSS applied to a page. The cascade take
+into account the origin of the CSS. This origin includes the browser's internal stylesheet,
+styles added by the browser extension or the operating system, and your authored CSS.
+
+The order of specificity of these origins, from least specific, to most specific is as follows:
+
+1- User agent base styles: These are the styles that your browser applies to HTML elements by default
+2- Local user styles: These can come from the operating system level, such as font-size
+3- Authored CSS: the CSS that you author
+4- Authored !important
+5- Local user styles !important
+6- User agent important
+*/
+
+
+/* 
+Importance in Cascading
+
+Not all CSS rules are calculated the same as each other, or give the same
+specificity as each other.
+
+The order of importance, from least important m to most important is as follows:
+
+1- Normal rule type, such as font-size, background or color
+2- animation rule type
+3- !important rule type (following the same order as origin)
+4- transition rule type
+*/
+

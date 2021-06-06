@@ -1,0 +1,76 @@
+/* 
+The z-index property explicityl sets a layer order for HTML based on the 
+3D space of the browser (Z axis).
+
+z-index can be positive and negative
+
+if no value for z-index is set, the browser will use the document source
+order to dictate z-index instead.
+
+In normal flow, if you set a specific value for z-index and it is not working,
+you need to set the element's position value to anything other than static.
+This is a common place where people struggle with z-index
+
+
+Note: z-index works with positions other than static.
+
+Note: This is not a case if you are in a flexbox or grid context, though,
+because you can modify the z-index of flex or grid items without adding
+position: relative.
+
+Stacking Context:
+
+A stacking context is a group of elements that have a common parent and move
+up and down the z-index together.
+
+Good Example:
+
+element -> z-index: 1
+  child -> z-index: 999
+anotherElement -> z-index: 2
+  anotherChild -> z-index: 2
+
+in this example anotherChild is going to be on top of child. Because
+both parents create a stacking context, the z-index of all children is based
+on that of their parent.
+
+IMPORTANT: The z-index of elements inside of a stacking context are always
+relative to the parent's current order in its own stacking context.
+
+The html element is a stacking context itself and nothing can ever go behind
+it. You can put stuff behind the <body> until you create a stacking context
+with it.
+
+You don't need to apply z-index and position to create a new stacking context.
+you can create a new stacking context by adding a value for properties which
+create a new composite layer such as opacity, will-change and transform.
+
+
+What is composite layer?
+
+To explain what a composite layer is, imagine a web page is a canvas. A browser
+takes your HTML and CSS and uses these to work ouy how big to make the canvas.
+It then paints the page on this canvas.
+
+If an element was to change, say it changes position, the browser then 
+has to go back and re-work out what to paint.
+
+To help with performance, the browser creates a new composite layers which
+are layered on top of the canvas. These are a bit like post-it notes; Moving
+one around and changing it does not have a huge impact on the overall canvas.
+
+A new composite layer is created for elements with opacity, transform and
+will-change because these aer very likely to change, so the browser makes
+sure that changes is performant as possible by the GPU to apply style
+adjustments.
+
+
+You can also create a stacking context by adding a filter and 
+setting backface-visibility: hidden.
+
+
+IMPORTANT: make sure position is set to something other than static to work
+with z-index.
+
+
+*/

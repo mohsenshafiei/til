@@ -1,0 +1,47 @@
+/* 
+The position property changes how an element behaves in the normal
+flow of the document, and how it relates to other elements. The available options are
+relative, absolute, fixed and sticky with the default value being static.
+*/
+
+
+/* 
+
+Adding position: relative to an element also makes it the
+containing block of any child elements with position: absolute.
+
+This means that its child will now be repositioned to this particular
+element, instead of the topmost relative parent, when it has an absolute position
+applied to it.
+*/
+.my-element {
+  position: relative;
+  top: 10px;
+}
+
+
+
+/* 
+When you set position to absolute, it breaks the element
+out of the current document flow.
+
+This means two things:
+
+1- You can position this element wherever you like, using top, right
+bottom and left in its nearest relative parent.
+
+2- All of the content surrounding an absolute element reflows to fill the
+remaining space left by that element.
+
+*/
+
+/* 
+An element with a position fixed behaves in a similar way to absolute, with its
+parent being the root <html> element. Fixed position elements stay anchored from the top
+left based on the top right bottom and left values that set.
+*/
+
+/* 
+Flexbox and grid have special wrapping features and they don't wrap their children by default.
+*/
+

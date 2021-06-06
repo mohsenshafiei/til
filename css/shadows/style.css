@@ -1,0 +1,56 @@
+/* 
+CSS has the box-shadow and text-shadow properties.
+
+The box-shadow property is for adding shadows to the box of an HTML element.
+it works on block elements and inline elements.
+
+The order of the values:
+
+box-shadow: 5px 5px 20px 5px #000;
+box-shadow: <horizontal offset> <vertical offset> <blur radius> <spread radius> <color>
+
+Horizontal offset: a positive number pushes it out from the left and
+ a negative number will push it out from the right.
+
+ Vertical offset: a positive number pushes it down from the top,
+ and a negative number will push it up from the bottom.
+
+ Blur radius: a larger number produces a more blurred shadow,
+ whereas a small number produces a sharper shadow.
+
+ Spread radius (optional): a larger number increases the size of the
+ shadow and a smaller number decreases it, making it the same size as the
+ blur radius if it's set to 0.
+
+ Color: Any valid color value. If this isn't defined,
+ the computed text color will be used.
+
+ Note: to make the box shadow an inner shadow, add an `inset`
+ keyword before the other properties.
+
+ Example:
+ box-shadow: inset 5px 5px 20px 5px #000;
+
+
+Note: you can add multiple shadows as much as possible.
+
+Note: if your box with box-shadow is in a container that has overflow: hidden
+the shadow won't break out of the overflow either.
+
+
+Text-Shadow
+
+the value for text-shadow are the same as box-shadow and in the same order.
+
+The only difference is that text-shadow has no spread value and no inset keyword.
+
+you can add as many shadows as you like with text-shadow
+
+
+Drop-Shadow Filter:
+
+This shadow is applied to an alpha mask which makes it very useful for adding a 
+shadow to a cutout image, as in the case in the intro of this module.
+
+
+*/

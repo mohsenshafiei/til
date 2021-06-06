@@ -1,0 +1,42 @@
+/* 
+linear-gradient(<direction or degree>, color1, color2)
+radial-gradient(color1, color2)
+conic-gradient() -> accepts position and angle
+
+Example: background: conic-gradient(from 10deg at 20% 30%, white, black);
+
+Another good example:
+
+.my-element {
+	background: conic-gradient(
+     gold 20deg, lightcoral 20deg 190deg, mediumturquoise 190deg 220deg, plum 220deg 320deg, steelblue 320deg);
+  border-radius: 50%;
+  border: 10px solid;
+}
+
+
+Each type of gradient has a repeating type, too.
+
+repeating-linear-gradient()
+repeating-radial-gradient()
+repeating-conic-gradient()
+
+The difference is that if the defined gradient can be repeating to fill the
+box, based on both of their sizes, it will.
+
+If your gradient does not appear to be repeating, you probably have not
+set a length for one of the color stops.
+
+Good Example:
+
+.my-element {
+  background: repeating-linear-gradient(
+    45deg,
+    red,
+    red 30px,
+    white 30px,
+    white 60px
+  );
+}
+
+*/

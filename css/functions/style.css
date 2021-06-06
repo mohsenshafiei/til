@@ -1,0 +1,108 @@
+/* 
+
+In CSS you can only use the provided functions, rather than write you own,
+but functions can be nested within each other in some contexts, giving them more
+flexibility.
+
+Custom properties:
+
+A custom property is a variable which allows you to tokenize values in your
+CSS code. Custom properties are also affected by the cascade which means
+they can be contextually manipulated or redefined.
+
+A custom property must be prefixed with two dashes (--) and are case
+sensitive.
+
+var(<custom_property>, <fallback_declaration>)
+
+Good example:
+
+.my-element {
+	background: var(--base-color, hotpink);
+}
+
+* Functions that return a value:
+
+var()
+
+attr() -> you can select the content of one HTML attribute
+Example: 
+a::after {
+  content: attr('href');
+}
+
+url() -> if cannot find the resource nothing will be returned
+
+
+* Color Functions
+
+rgb()
+rgba()
+hsl()
+hsla()
+hwb()
+lab()
+lch()
+
+* Mathematical Expressions
+
+calc()
+
+calc function can be nested inside another calc() function.
+You can also pass custom properties in a var() function as part of an
+expression.
+
+min()
+max()
+clamp(min, ideal, max)
+
+
+* Shapes Functions
+
+These functions us eshapes to visually clip you vox or provide a shape for content
+to flow around.
+
+clip-path
+offset-path
+shape-outside
+
+the shape functions that can be usd with these properties are:
+
+circle()
+ellipse()
+inset()
+polygon() -> take comma separated pairs of X and Y axis values to create
+custom shapes.
+
+Good Example:
+
+.polygon {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+Transform Functions
+
+rotate
+rotateX()
+rotateY()
+rorateZ()
+rotate3d()
+scale()
+scaleX()
+scaleY()
+scaleZ()
+scale3d()
+translate() -> the translate functions move an element while it maintains
+its position in the document flow.
+translateX()
+translateY()
+translate3d()
+skew()
+perspective() -> is part of transform family to alter the distance between
+the user and the Z plane. this gives the feeling of distance and can
+be used to create a depth of field in your designs.
+
+
+
+NOte: CSS has built in math function
+*/

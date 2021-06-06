@@ -1,0 +1,43 @@
+/* Everything displayed by CSS is a box. */
+
+/* Boxes are made up of distinct box model areas that all do a specific job. */
+
+/* We have content-box, padding-box, border-box, margin-box */
+
+/* 
+If our box has overflow rules set, such as overflow: auto or overflow: scroll,
+the scrollbars will occupy this space too.
+*/
+
+/* 
+Properties such as outline and box-shadow occupy, margin-box and because they are
+painted on top, so they don't affect the size of our box. You could have an 
+outline-width of 200px and everything would be exactly the same size.
+*/
+
+/* 
+To understand the box model it is better to know that each browser applies a user
+agent stylesheet to HTML documents. The CSS used varies between each browser, but
+they provide sensible defaults to make content easier to read.
+*/
+
+/* 
+By default, all the elements have the following user agent style: box-sizing: content-box
+*/
+
+/* 
+Having content-box as the value of box-sizing means that when you set dimensions,
+such as a width and height, they will be applied to the content box. If you 
+then set padding and border, these values will be added to the content box's size.
+*/
+
+
+/* 
+to reset all the user agent style and make the styling more predictable use below code:
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

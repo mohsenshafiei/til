@@ -1,0 +1,45 @@
+/* 
+Pseudo-elements
+
+A peeudo-element is like adding or targeting an extra element without having to add
+more HTML.
+
+There are limited properties that you can add to different pseudo-elements.
+
+::before
+::after
+
+Note: you can only insert a ::before or ::after element
+to an element that will accept child elements. so elements such as <img /> and 
+<video>, <button> and <input > won't work.
+
+::first-letter
+::first-line
+
+
+::backdrop
+
+if you have an element that is presented in full screen mode, such as
+dialog or a video you can style the backdrop.
+
+::backdrop pseudo-element is supported in all major browsers apart from safari.
+
+the backdrop style used when a video is shifted to full-screen mode is configured
+to be a grey-blue color rather than the black it defaults to in most browsers.
+
+::marker -> pseudo-element lets you style the bullet or number 
+for a list item or the arrow of a <summary> element.
+
+::selection -> allows you to style how selected text looks
+
+::placeholder
+
+::cue -> This allows you to style the WebVTT cues, which are the captions of a <video> element.
+
+
+
+While DevTools may show pseudo-elements in the Elements panel, 
+pseudo-elements won't be found in the HTML, they're owned by the browser.
+
+They can be targeted by CSS but won't be found in the HTML.
+*/
