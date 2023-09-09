@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+    <h1 id="result">0</h1> <!-- Fixed the closing tag -->
+		<div id="container">
+      <button id="add">+</button> <!-- Changed the id to "add" -->
+      <button id="minus">-</button>
+      <button id="equals">=</button>
+      <button id="reset">reset</button>
+    </div>
+	</body>
+	<script>
+		let result = 0;
+		
+    const add = (e) => {
+			result += 1;
+			updateResult();
+      e.stopImmediatePropagation();
+		};
+
+		const minus = (e) => {
+			result -= 1;
+			updateResult();
+      e.stopImmediatePropagation();
+		};
+
+		const updateResult = () => {
+			document.getElementById("result").innerHTML = result;
+		};
+
+    const sayHi = () => window.alert("Hi Mohsen");
+
+    // Change the boolean value to switch between event capturing and event bubbling
+		document.getElementById("container").addEventListener("click", sayHi, false); 
+    document.getElementById("add").addEventListener("click", add);
+		document.getElementById("minus").addEventListener("click", minus);
+		document.getElementById("equals").addEventListener("click", updateResult);
+		document.getElementById("reset").addEventListener("click", () => {
+			result = 0;
+			updateResult();
+		});
+	</script>
+</html>

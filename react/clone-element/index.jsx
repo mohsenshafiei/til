@@ -1,10 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-const element = React.createElement("h1", { className: "classic" }, "Header 1");
+const ParentComponent = (props) => {
+	return (
+		<div>
+			{React.Children.map(props.children, (child) => {
+				return React.cloneElement(child, { className: "my-class" });
+			})}
+		</div>
+	);
+};
 
-const clonedElement = React.cloneElement(element);
-
-ReactDOM.render(clonedElement, document.getElementById("root"));
-// <element.type {...element.props} {...props}>{children}</element.type>
-// Ref will point to the same element if we clone the element
+export const App = () => {
+	return (
+		<ParentComponent>
+			<h1>Hello</h1>
+			<p>World</p>
+		</ParentComponent>
+	);
+};

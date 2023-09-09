@@ -1,0 +1,1 @@
+const compose = (...fns) => (result) => fns.reverse().reduce((result, fn) => fn(result), result);
