@@ -23,7 +23,6 @@ var search = (nums, target) => {
     return Math.max(bs(mid + 1, r), bs(l, mid - 1));
   };
   const index = bs(0, nums.length - 1);
-  console.log(index);
   if (target === nums[index]) return true;
   if (target <= nums[index] && target >= nums[0]) {
     const temp = nums.slice(0, index);
