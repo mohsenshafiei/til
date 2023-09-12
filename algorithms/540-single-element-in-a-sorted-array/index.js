@@ -18,7 +18,6 @@ const singleNonDuplicate = (nums) => {
       }
     }
   };
-
   return bs(0, nums.length - 1);
 };
 
